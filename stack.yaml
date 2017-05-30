@@ -1,0 +1,11 @@
+resolver: lts-8.11
+
+packages:
+- '.'
+
+extra-deps: []
+flags: {}
+extra-package-dbs: []
+
+# -Wno-missing-signatures : requiring all top-level functions to have sigs is not worth it
+ghc-options:

@@ -1,0 +1,36 @@
+name: haskell-di
+version: "0.1.0"
+description: example for an approach to dependency injection in haskell
+maintainer: Aaron Todd
+stability: experimental
+license: AllRightsReserved
+license-file: LICENSE
+default-extensions: NoImplicitPrelude
+
+extra-source-files:
+  - readme.md
+
+library:
+  source-dirs:
+    - library
+  exposed-modules:
+    - Example.Logger
+    - Example.Fwooper
+    - Example.Database
+    - Example.Service
+    - Example.Program
+  dependencies:
+    - base >= 4.8 && < 5
+    - protolude >= 0.1.10
+    - text >= 1.2
+
+executables:
+  haskell-di-example:
+    main: Main.hs
+    source-dirs: example
+    dependencies:
+      - base >= 4.8 && < 5
+      - haskell-di
+      - protolude >= 0.1.10
+      - text >= 1.2
+
