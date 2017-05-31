@@ -2,17 +2,16 @@
 a more complex toy compute service to demonstrate composing modules.
 -}
 
+{-# LANGUAGE FlexibleInstances     #-}
+{-# LANGUAGE GADTs                 #-}
 {-# LANGUAGE MultiParamTypeClasses #-}
-{-# LANGUAGE FlexibleInstances #-}
-{-# LANGUAGE OverloadedStrings #-}
-{-# LANGUAGE GADTs #-}
 
 module Example.Service where
 
-import Protolude
-import Example.Logger
-import Example.Database
-import Example.Fwooper
+import           Example.Database
+import           Example.Fwooper
+import           Example.Logger
+import           Protolude
 
 -- interface
 class (Monad m) => HardLogicService m a where

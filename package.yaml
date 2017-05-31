@@ -5,7 +5,9 @@ maintainer: Aaron Todd
 stability: experimental
 license: AllRightsReserved
 license-file: LICENSE
-default-extensions: NoImplicitPrelude
+default-extensions:
+  - NoImplicitPrelude
+  - OverloadedStrings
 
 extra-source-files:
   - readme.md
@@ -33,4 +35,3 @@ executables:
       - haskell-di
       - protolude >= 0.1.10
       - text >= 1.2
-
