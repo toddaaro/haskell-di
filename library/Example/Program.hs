@@ -2,18 +2,17 @@
 a demo of how to do smd code in haskell. example is a fake compute service.
 -}
 
+{-# LANGUAGE FlexibleInstances     #-}
+{-# LANGUAGE GADTs                 #-}
 {-# LANGUAGE MultiParamTypeClasses #-}
-{-# LANGUAGE FlexibleInstances #-}
-{-# LANGUAGE OverloadedStrings #-}
-{-# LANGUAGE GADTs #-}
 
 module Example.Program where
 
-import Protolude
-import Example.Logger
-import Example.Database
-import Example.Service
-import Example.Fwooper
+import           Example.Database
+import           Example.Fwooper
+import           Example.Logger
+import           Example.Service
+import           Protolude
 
 {-
 finally wire the dependencies and call the top level entry.

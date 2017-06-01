@@ -2,15 +2,14 @@
 a toy database service to demonstrate composing modules.
 -}
 
+{-# LANGUAGE FlexibleInstances     #-}
+{-# LANGUAGE GADTs                 #-}
 {-# LANGUAGE MultiParamTypeClasses #-}
-{-# LANGUAGE FlexibleInstances #-}
-{-# LANGUAGE OverloadedStrings     #-}
-{-# LANGUAGE GADTs #-}
 
 module Example.Database where
 
-import Protolude
-import Example.Logger
+import           Example.Logger
+import           Protolude
 
 -- interface for using a database
 class (Monad m) => Database m a where

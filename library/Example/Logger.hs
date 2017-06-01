@@ -2,15 +2,14 @@
 lowest level leaf module for our toy modularity example.
 -}
 
-{-# LANGUAGE MultiParamTypeClasses #-}
-{-# LANGUAGE FlexibleInstances #-}
-{-# LANGUAGE OverloadedStrings     #-}
+{-# LANGUAGE FlexibleInstances      #-}
 {-# LANGUAGE FunctionalDependencies #-}
-{-# LANGUAGE GADTs #-}
+{-# LANGUAGE GADTs                  #-}
+{-# LANGUAGE MultiParamTypeClasses  #-}
 
 module Example.Logger where
 
-import Protolude
+import           Protolude
 
 -- interface for writing a log statement
 class (Monad m) => Logger m a | a -> m where
